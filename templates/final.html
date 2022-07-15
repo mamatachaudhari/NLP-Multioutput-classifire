@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<style>
+
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/business-people-construction-site-dark-dramatic-full-length-portrait-two-wearing-hardhats-holding-plans-199973844.jpg');
+    color: #FFFFFF;
+}
+</style>
+<body>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">    
+		body
+		{
+		    counter-reset: Serial;          
+		}
+
+		table
+		{
+		    border-collapse: separate;
+		}
+
+		tr td:first-child:before
+		{
+		  counter-increment: Serial;      
+		  content: counter(Serial); 
+		}
+	</style>
+</head>
+<body>
+   
+	<table border="1" cellpadding="10" style="margin-left:auto;margin-right:auto;">
+	  
+		<tr>
+			<th>Sr.No</th>
+			<th>Plant Name</th>
+			
+		</tr>
+		{% for value in out %}
+		<tr>
+			<td></td>
+			<td>{{ value }}</td>
+			
+		</tr>
+		{% endfor %}
+		
+	</table>
+	
+</body>
+</html>

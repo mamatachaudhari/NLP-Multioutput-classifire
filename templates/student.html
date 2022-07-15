@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<style>
+
+body {
+    background-image: url('https://www.ie.edu/insights/wp-content/uploads/2020/11/VanSchendel-Construction.jpg');
+    color: #FFFFFF;
+}
+</style>
+<body>
+ <div class="login">
+	<h1>Predict Plant</h1>
+
+
+
+
+<form action = "http://localhost:5000/result" method = "POST">
+   <p>Name <input type = "text" name = "BP Code" /></p>
+   
+   <p><input type = "submit" value = "submit" /></p>
+</form>
+
+<br>
+   <br>
+   {{ prediction_text }}
+ </div>
+</body>
+</html>
